@@ -1,0 +1,10 @@
+delivery_dateがNULLのレコードを抽出する
+
+SELECT * FROM テーブル WHERE delivery_date IS NULL;
+
+delivery_dateを更新する
+
+UPDATE テーブル SET delivery_date = '日付' WHERE delivery_date IS NULL;
+
+
+※WHEREで条件指定しないと、テーブルのdelivery_dateが全て変わってしまうので注意！！

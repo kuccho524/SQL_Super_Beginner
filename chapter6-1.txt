@@ -1,0 +1,13 @@
+INSERT文
+INSERT 対象のテーブル (カラム1, カラム2, ・・・) VALUES (値1, 値2,・・・);
+
+※覚えておくこと
+・INSERT文で一度に追加できるレコードは原則として1件
+・上記()の通りカラム名を省略できる
+
+
+デフォルト値・・・初期値のこと、明示的に設定しなかった場合はnullが入る
+
+CREATE文でのテーブル定義例
+ex) CREATE TABLE books(book_id integer CONSTRAINT pk_books_id PRIMARY KEY,・・・, stock integer DEFAULT 0);
+
