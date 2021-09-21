@@ -1,0 +1,21 @@
+テーブル結合の種類
+・直積結合
+・WHERE句を使用した結合
+・内部結合
+・外部結合
+
+結合の例
+ex) SELECT sampletable.a sampletable.b FROM sampletable ⇒ SELECT S.a S.b FROM sampletableS
+
+上記のようにSという別名を付ける
+
+
+・直積結合・・・各テーブルに存在するレコードの組み合わせのすべてを取り出す結合
+ex) SELECT カラム名 FROM テーブル名1 CROSS JOIN テーブル名2;
+
+
+・WHERE句を使った結合
+ex) SELECT カラム名 FROM テーブル1, テーブル2 WHERE 結合条件;
+
+
+※結合する際は、テーブルに別名を付けること！！
