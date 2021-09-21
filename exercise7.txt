@@ -1,0 +1,14 @@
+1、t_orderとt_itemテーブルの結合
+SELECT o.item_no, i.item_name, o.amount FROM t_order o, t_item i WHERE o.item_no = i.item_no;
+
+※最初に各テーブルの全てのカラムを把握しておき、かぶるカラムを条件に指定する
+
+
+2、上記を内部結合に書き換える
+SELECT o.item_no, i.item_name, o.amount FROM t_order o INNER JOIN t_item i ON o.item_no = i.item_no;
+
+※INNER JOINを利用する場合、条件をONで指定する
+
+
+3、t_itemテーブルに対し、t_orderテーブルを左側外部結合で結合してレコードを抽出する
+SELECT i.*, o.* FROM t_item i LEFT OUTER JOIN t_order o ON i.item_no = o.item_no;
