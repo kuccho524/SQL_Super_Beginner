@@ -1,0 +1,12 @@
+WHEREを使って2つのテーブルを結合する
+
+基本構文)
+SELECT A.カラム1, ・・・, B.カラム1, ・・・ FROM テーブル A, テーブル B WHERE A.共通のカラム = B.共通のカラム;
+
+ex)
+SELECT i.item_no, i.item_name, o.amount FROM t_item i, t_order o WHERE i.item_no = o.order_no;
+
+
+１，SELECT * FROM 対象のテーブル; で共通するカラムを見つける
+２，表示したいカラムをSELECT文に記述する
+３，共通するカラムをWHERE句の条件に記述。INNER JOIN, OUTER JOINの場合はON句の条件に記述
