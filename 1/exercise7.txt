@@ -1,0 +1,19 @@
+WHERE結合でレコードを表示する
+SELECT i.item_no, i.item_name, o.amount FROM t_order o, t_item i WHERE i.item_no = o.item_no;
+
+FROM句でテーブルを２つ指定し、WHEREで条件を絞る
+
+
+上記をINNER JOINで書き換え
+
+SELECT i.item_no, i.item_name, o.amount FROM t_order o INNER JOIN t_item i ON o.item_no = i.item_no;
+
+FROM句でテーブルを１つ指定し、INNER JOINでもう一つのテーブルを指定。
+INNER JOIN句を使用する時はON句で条件を指定
+
+
+上記をLEFT OUTER JOINで書き換え
+SELECT i.item_no, i.item_name, o.amount FROM t_item i LEFT OUTER JOIN t_order o ON o.item_no = i.item_no;
+
+FROM句でテーブルを１つ指定し、OUTER JOINでもう一つのテーブルを指定。
+OUTER JOIN句を使用する時はON句で条件を指定
