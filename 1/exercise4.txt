@@ -1,0 +1,11 @@
+t_orderにあるレコードからquantityにプラス10した値が40以上のレコードを表示する。
+取得するカラムはorder_noとquantityのみとする
+
+SELECT order_no, quantity + 10 AS quantityにプラス10 FROM t_order WHERE quantity + 10 >= 40;
+
+
+t_orderのレコード全てを抽出し、item_noを昇順、delivery_dateを降順に並び替える
+SELECT * FROM t_order ORDER BY item_no, delivery_date DESC;
+
+下記に書き換え可能
+SELECT * FROM t_order ORDER BY item_no ASC, delivery_date DESC;
