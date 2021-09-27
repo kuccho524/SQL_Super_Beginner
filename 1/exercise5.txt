@@ -1,0 +1,9 @@
+t_orderテーブルからitem_noごとにamountの合計を抽出する
+SELECT item_no AS 注文番号. SUM(amount) AS 合計金額 FROM t_order GROUP BY item_no;
+
+
+t_orderテーブルからitem_noごとにレコード数を抽出する
+SELECT COUNT(item_no) FROM t_order GROUP BY item_no;
+
+
+カラムごとに = GROUP BYを使用する
