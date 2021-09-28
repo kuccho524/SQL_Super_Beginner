@@ -1,0 +1,10 @@
+NULLのレコードを抽出
+SELECT * FROM t_order WHERE delivery_date IS NULL;
+
+
+上記で抽出しされたレコードを更新
+UPDATE t_order SET delivery_date = '2017-05-01' WHERE delivery_date IS NULL;
+
+
+上記を元に戻す
+UPDATE t_order SET delivery_date = NULL WHERE delivery_date = '2017-05-01';
